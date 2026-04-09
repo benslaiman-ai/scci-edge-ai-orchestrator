@@ -1,6 +1,7 @@
-# 🧠 SCCI Edge AI Router
+# 🧠 SCCI Edge AI Router - Distributed AI Routing System
 
 **Distributed AI routing system inspired by telecom network architectures**
+
 
 ---
 
