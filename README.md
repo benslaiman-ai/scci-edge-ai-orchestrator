@@ -1,5 +1,3 @@
-# scci-edge-ai-router
-Distributed Edge AI Router with telecom-inspired routing logic
 # 🧠 SCCI Edge AI Router
 
 **Distributed AI routing system inspired by telecom network architectures**
@@ -14,7 +12,7 @@ SCCI Edge AI Router is an experimental distributed inference system designed to 
 * 🖥️ CPUs
 * ⚡ GPUs
 
-The system dynamically selects models and nodes based on **task complexity, context size, and system state**, using routing strategies inspired by telecom concepts like **handover, load balancing, and resilience**.
+The system dynamically selects models and execution paths based on **task complexity, context size, and system state**, using routing strategies inspired by telecom concepts like **handover, load balancing, and resilience**.
 
 ---
 
@@ -49,7 +47,7 @@ Others (such as advanced chunking) are planned but **not yet fully integrated or
 
 ### 📡 Telecom-Inspired Routing Logic
 
-* Context-based escalation (similar to handover)
+* Context-based escalation (handover-like behavior)
 * Anti-thrashing mechanisms
 * Sticky routing (session continuity)
 * Predictive context scaling
@@ -77,17 +75,17 @@ Others (such as advanced chunking) are planned but **not yet fully integrated or
 
 ---
 
-## ⚠️ Important Note on Chunking
+## 🏗️ Code Structure
 
-A distributed chunking pipeline is **planned and under development**, but:
+The current implementation is **monolithic**, designed to allow rapid iteration and experimentation.
 
-> ❗ It is **not yet fully integrated nor validated in this version**
+A modular architecture is planned, including:
 
-Future versions will include:
-
-* semantic chunking
-* intelligent boundary detection
-* parallel summarization pipelines
+* separated routing engine
+* chunking pipeline
+* scoring and validation modules
+* node configuration (e.g. `nodes.yaml`)
+* clearer service boundaries
 
 ---
 
@@ -129,21 +127,42 @@ User Request
 
 ---
 
+## ⚠️ Important Note on Chunking
+
+A distributed chunking pipeline is **planned and under development**, but:
+
+> ❗ It is **not yet fully integrated nor validated in this version**
+
+Future versions will include:
+
+* semantic chunking
+* intelligent boundary detection
+* parallel summarization pipelines
+
+---
+
 ## 🔬 Roadmap
 
-### Next Steps (v12+)
+### v12 (in progress)
 
 * Semantic chunking (embedding-aware)
-* Distributed summarization pipeline
 * Model scoring system
-* Validation / aggregation node
+* Improved validation logic
 
-### Future Work
+### v13 (planned)
 
-* Multi-model voting / validation
+* Real embeddings integration (MiniLM / E5 / BGE)
 * Memory-aware routing
+* Multi-model validation / voting
 * Confidence scoring
+* Context-aware model handover
+
+### Future Directions
+
+* Streaming partial results
+* Cost-aware routing
 * Edge-only inference pipelines
+* Self-optimizing routing (learning from past tasks)
 
 ---
 
@@ -156,17 +175,17 @@ This is an **independent research project** based on practical experience in:
 * edge computing constraints
 
 More experiments and demos:
-👉 https://benslaiman.com/lab.html
+👉 https://benslaiman.com/
 
 ---
 
 ## 🎥 Demonstrations
 
-Some demonstrations (handover logic, routing behavior, image generation, etc.) are available via:
+Demonstrations (handover logic, routing behavior, image generation, etc.) are available via:
 
 👉 https://benslaiman.com/lab.html
 
-(External videos may be added later for clearer demonstrations.)
+(External video demonstrations may be added later.)
 
 ---
 
