@@ -230,7 +230,6 @@ The current implementation is NOT:
 * Distributed transformer execution
 * Distributed KV cache synchronization
 * Traditional Mixture of Experts (MoE)
-* Exo
 
 The focus is orchestration and coordination of specialized services rather than partitioning a single model across devices.
 
