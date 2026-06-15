@@ -254,7 +254,7 @@ Current experimental implementation includes:
 
 The orchestration layer itself can operate on lightweight hardware.
 
-One demonstration uses a Lenovo T400 laptop as the SCCI Router while AI workloads execute across Android devices.
+One demonstration uses a Lenovo T400 laptop as the SCCI Orchestrator while AI workloads execute across Android devices.
 
 ---
 
