@@ -184,11 +184,14 @@ SCCI is designed to operate across heterogeneous devices.
 
 A typical experimental deployment may include:
 
-* Open WebUI as user interface
-* FastAPI/Uvicorn based SCCI Router
-* Android devices running AI services through Termux
-* CPU and GPU nodes
-* Local network communication between services
+Open WebUI as the user interface
+FastAPI/Uvicorn based SCCI Orchestrator
+llama.cpp inference nodes
+Android devices running AI services through Termux
+Whisper Speech-to-Text services
+Kokoro Text-to-Speech services
+CPU and GPU execution nodes
+Local network communication between services
 
 The architecture allows specialized AI services to run independently while remaining accessible through a unified interface.
 
