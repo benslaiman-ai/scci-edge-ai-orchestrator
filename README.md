@@ -153,7 +153,7 @@ Examples of inspiration include:
                Open WebUI / API
                        │
                        ▼
-                  SCCI Router
+                  SCCI Orchestrator
                        │
      ┌─────────────────┼─────────────────┐
      │                 │                 │
