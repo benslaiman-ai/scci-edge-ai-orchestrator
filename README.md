@@ -267,6 +267,8 @@ Current demonstrations include:
 * Image generation workflows
 * Expert delegation
 * Heterogeneous hardware utilization
+* Predictive Context Scaling
+* Context Handover
 
 ---
 
@@ -274,8 +276,7 @@ Current demonstrations include:
 
 Areas currently being explored include:
 
-* Predictive Context Scaling
-* Context Handover
+
 * Temporal Awareness
 * Reliability Metrics
 * Memory Lifecycle Management
