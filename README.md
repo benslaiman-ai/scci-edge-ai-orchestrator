@@ -8,25 +8,25 @@ Rather than relying on a single large model or distributing a transformer across
 
 > Coordinating specialized AI services through adaptive routing, continuity mechanisms and intelligent resource allocation.
 
-The project focuses on reliability, session continuity, context management and efficient use of heterogeneous hardware.
+The project focuses on reliability, session continuity, context management and efficient utilization of heterogeneous hardware.
 
 ---
 
 # Why SCCI?
 
-Most AI systems are designed around a single model.
+Most AI systems are built around a single model.
 
-SCCI explores a service-oriented approach where multiple specialized AI components collaborate while a primary conversational model maintains global coherence.
+SCCI explores a service-oriented architecture where multiple specialized AI services collaborate while a primary conversational model maintains global coherence.
 
-The objective is not simply to run AI on multiple devices.
+The objective is not simply to run AI across multiple devices.
 
 The objective is to answer a different question:
 
-> Can intelligent orchestration of specialized resources provide a practical alternative to monolithic AI deployments?
+> Can intelligent orchestration of specialized resources provide an alternative path to building capable AI systems?
 
 ---
 
-# Core Principles
+# Core Design Principles
 
 ## Reliability
 
@@ -42,9 +42,9 @@ Reliability is treated as a first-class design goal.
 
 User experience should remain consistent even when underlying resources change.
 
-Inspired by continuity concepts commonly found in telecommunications networks, SCCI explores mechanisms that allow conversations and tasks to continue despite node changes or failures.
+Inspired by continuity mechanisms commonly found in telecommunications networks, SCCI explores ways to maintain conversations and services despite node changes or failures.
 
-A practical demonstration includes disconnecting an active node during a conversation and continuing the workflow through another available resource.
+One demonstration intentionally disconnects an active node during a conversation while allowing the session to continue through another available resource.
 
 ---
 
@@ -56,7 +56,7 @@ Instead of allocating large context windows from the beginning, the system explo
 
 Example:
 
-CTX 2048
+2048 Context
 
 ↓
 
@@ -64,7 +64,7 @@ CTX 2048
 
 ↓
 
-Prewarm CTX 4096 node
+Prewarm 4096 Context Node
 
 ↓
 
@@ -80,13 +80,13 @@ Conversation continues
 
 The objective is to prepare the next resource before context saturation occurs.
 
-This concept is inspired by predictive resource management and continuity mechanisms used in telecommunications systems.
+This concept is inspired by predictive resource management and continuity mechanisms commonly used in telecommunications systems.
 
 ---
 
 ## Expert Orchestration
 
-SCCI uses specialized experts for specific tasks.
+SCCI uses specialized AI experts for specific tasks.
 
 Examples include:
 
@@ -98,7 +98,7 @@ Examples include:
 * Translation
 * Classification
 
-The primary conversational model remains responsible for maintaining overall conversation coherence and generating final responses.
+The primary conversational model remains responsible for maintaining conversation coherence and generating final responses.
 
 Experts operate as specialized services rather than independent conversational entities.
 
@@ -118,7 +118,7 @@ Examples include:
 
 The goal is not to maximize hardware usage.
 
-The goal is to use the appropriate resource for each task.
+The goal is to use the appropriate resource at the appropriate time.
 
 ---
 
@@ -135,46 +135,62 @@ Many SCCI concepts originate from practical experience in:
 
 Examples of inspiration include:
 
-* Service selection
-* Routing policies
-* Continuity mechanisms
-* Resource optimization
-* Fault tolerance
-* Adaptive escalation strategies
+* Service Selection
+* Routing Policies
+* Session Continuity
+* Resource Optimization
+* Fault Tolerance
+* Adaptive Escalation Strategies
 
 ---
 
 # Architecture
 
-User
+```text
+                     User
+                       │
+                       ▼
+               Open WebUI / API
+                       │
+                       ▼
+                  SCCI Router
+                       │
+     ┌─────────────────┼─────────────────┐
+     │                 │                 │
+     ▼                 ▼                 ▼
 
-↓
+ Primary Model    Vision Expert    Coding Expert
 
-SCCI Router
+     │                 │                 │
 
-↓
+ Android/CPU      Android Termux   Android Termux
 
-Primary Conversational Model
+     └─────────────────┼─────────────────┘
+                       │
+                       ▼
 
-↓
-
-Expert Selection
-
-├── Vision Expert
-
-├── Coding Expert
-
-├── STT Expert
-
-├── TTS Expert
-
-├── Image Generation Expert
-
-└── Additional Specialized Services
+         STT / TTS / Image Generation
+```
 
 The primary model maintains context and conversation coherence.
 
 Experts execute specialized workloads and return results to the coordinator.
+
+---
+
+# Deployment Model
+
+SCCI is designed to operate across heterogeneous devices.
+
+A typical experimental deployment may include:
+
+* Open WebUI as user interface
+* FastAPI/Uvicorn based SCCI Router
+* Android devices running AI services through Termux
+* CPU and GPU nodes
+* Local network communication between services
+
+The architecture allows specialized AI services to run independently while remaining accessible through a unified interface.
 
 ---
 
@@ -191,7 +207,16 @@ Routing decisions may consider:
 * System load
 * Session state
 
-Future versions may introduce semantic intent classification and confidence-based routing policies.
+Future versions may combine:
+
+* Deterministic routing
+* Semantic intent detection
+* Confidence scoring
+* Adaptive expert selection
+
+The guiding principle is simple:
+
+> Use intelligence only when intelligence is required.
 
 ---
 
@@ -205,9 +230,9 @@ The current implementation is NOT:
 * Distributed transformer execution
 * Distributed KV cache synchronization
 * Traditional Mixture of Experts (MoE)
-* A distributed inference framework such as Exo
+* Exo
 
-The primary focus is orchestration and coordination of specialized services rather than partitioning a single model across devices.
+The focus is orchestration and coordination of specialized services rather than partitioning a single model across devices.
 
 ---
 
@@ -215,17 +240,19 @@ The primary focus is orchestration and coordination of specialized services rath
 
 Current experimental implementation includes:
 
+* Open WebUI
 * FastAPI
 * Uvicorn
 * llama.cpp
 * Android expert nodes
+* Termux-based deployment
 * Whisper Speech-to-Text
 * Kokoro Text-to-Speech
 * Local AI inference
 
 The orchestration layer itself can operate on lightweight hardware.
 
-One demonstration uses a Lenovo T400 laptop as the SCCI router while AI workloads execute across Android devices.
+One demonstration uses a Lenovo T400 laptop as the SCCI Router while AI workloads execute across Android devices.
 
 ---
 
@@ -235,7 +262,7 @@ Current demonstrations include:
 
 * Multi-device AI orchestration
 * Session continuity
-* Failover handling
+* Wi-Fi node failure handling
 * Adaptive routing
 * Speech interaction
 * Image generation workflows
@@ -263,7 +290,7 @@ Areas currently being explored include:
 
 SCCI was developed through a collaboration between human expertise and AI-assisted development.
 
-The architectural concepts, experimentation and system design originate from experience in telecommunications, cloud platforms and distributed systems.
+The architectural concepts, experimentation and overall vision originate from experience in telecommunications, cloud platforms and distributed systems.
 
 AI tools were used to accelerate:
 
@@ -286,6 +313,8 @@ Feedback, criticism and technical discussion are always welcome.
 
 ---
 
-More information:
+## Additional Information
+
+More information, demonstrations and technical notes:
 
 benslaiman.com
