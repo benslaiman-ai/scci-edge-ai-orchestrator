@@ -317,4 +317,8 @@ Feedback, criticism and technical discussion are always welcome.
 
 More information, demonstrations and technical notes:
 
-benslaiman.com
+Project Website:
+https://benslaiman.com
+
+YouTube Channel:
+https://www.youtube.com/@Benslaimancom
