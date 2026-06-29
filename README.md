@@ -251,10 +251,12 @@ Current experimental implementation includes:
 * Whisper Speech-to-Text
 * Kokoro Text-to-Speech
 * Local AI inference
+* Stable Diffusion image generation
 
 The orchestration layer itself can operate on lightweight hardware.
 
 One demonstration uses a Lenovo T400 laptop as the SCCI Orchestrator while AI workloads execute across Android devices.
+
 
 ---
 
